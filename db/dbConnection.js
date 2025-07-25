@@ -8,7 +8,7 @@ export async function dbConnection() {
             return
         }
 
-        mongoose.connect(`${process.env.MONGODB_URI}/${process.env.DB_USERNAME}` || "")
+        await mongoose.connect(`${process.env.MONGODB_URI}/${process.env.DB_USERNAME}`)
         const connection = mongoose.connection
         
         connection.on("connected",()=>{
