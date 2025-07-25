@@ -21,11 +21,10 @@ export default async function sendEmail({ email, emailType, userId }) {
     }
 
     let transport = nodemailer.createTransport({
-      host: "sandbox.smtp.mailtrap.io",
-      port: 2525,
+      service: "gmail",
       auth: {
-        user: "e7faa4cdd09396",
-        pass: "0ca2aaa76b0fbb",
+        user: process.env.USER_EMAIL,
+        pass:process.env.USER_PASS,
       },
     });
 
