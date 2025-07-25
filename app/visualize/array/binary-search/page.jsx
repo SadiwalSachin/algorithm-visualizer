@@ -112,7 +112,7 @@ const BinarySearch = () => {
     const svg = d3.select(svgRef.current);
     svg.selectAll("*").remove();
 
-    const width = 800;
+    const width = 300;
     const height = 300;
     const barWidth = Math.min(width / array.length, 60); // Limit bar width for better display
     const actualWidth = barWidth * array.length;
@@ -228,7 +228,7 @@ const BinarySearch = () => {
   };
 
   return (
-    <div className="min-h-screen bg-zinc-900 py-8">
+    <div className="min-h-screen bg-zinc-900 py-5 md:py-8">
        <div className="mb-6 ml-6">
           <Link
             href="/visualize/array"
@@ -237,7 +237,7 @@ const BinarySearch = () => {
             ← Back to Array Algorithms
           </Link>
         </div>
-    <div className="flex flex-col md:flex md:flex-row px-8 gap-x-8 gap-y-8"> 
+    <div className="flex flex-col md:flex md:flex-row md:px-8 px-3 gap-x-8 gap-y-8"> 
       <div className="mt-8 bg-white rounded-lg shadow-md p-6">
         <h3 className="text-xl font-semibold mb-4 text-gray-800">
           About Binary Search
@@ -347,9 +347,9 @@ const BinarySearch = () => {
             </div>
             <button
               onClick={generateSortedArray}
-              className="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700"
+              className="md:px-4 md:py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700"
             >
-              Generate Random Array
+              Generate Array
             </button>
           </div>
           

@@ -14,8 +14,8 @@ export default function BubbleSortPage() {
   const [sortedIndices, setSortedIndices] = useState([]);
   const [speed, setSpeed] = useState(50);
 
-  const ARRAY_SIZE = 10;
-  const SVG_WIDTH = 800;
+  const ARRAY_SIZE = 7;
+  const SVG_WIDTH = 300;
   const SVG_HEIGHT = 400;
   const MARGIN = { top: 20, right: 20, bottom: 40, left: 40 };
   const CHART_WIDTH = SVG_WIDTH - MARGIN.left - MARGIN.right;
@@ -183,7 +183,7 @@ export default function BubbleSortPage() {
 
   return (
     <div className=" bg-zinc-900 py-8">
-      <div className="mb-6 ml-6">
+      <div className="md:mb-6 ml-6">
         <Link
           href="/visualize/array"
           className="text-blue-500 hover:text-blue-600 font-medium"
@@ -192,7 +192,7 @@ export default function BubbleSortPage() {
         </Link>
       </div>
 
-      <div className="px-4 md:flex md:flex-row flex flex-col gap-y-4 items-start gap-x-10">
+      <div className="px-4 md:flex md:flex-row flex flex-col gap-y-2 items-start gap-x-10">
         <div className="mt-8 bg-white rounded-lg shadow-md p-6">
           <h3 className="text-xl font-semibold mb-4 text-gray-800">
             About Bubble Sort

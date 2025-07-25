@@ -17,7 +17,7 @@ const MergeSort = () => {
   // Generate random array
   const generateRandomArray = () => {
     const newArray = Array.from(
-      { length: 20 },
+      { length: 7 },
       () => Math.floor(Math.random() * 90) + 10
     );
     setArray(newArray);
@@ -32,7 +32,7 @@ const MergeSort = () => {
   useEffect(() => {
     if (!array.length) return;
 
-    const w = 600;
+    const w = 300;
     const h = 300;
 
     const svg = d3.select(svgRef.current).attr("width", w).attr("height", h);

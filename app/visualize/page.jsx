@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
 import { cn } from "@/lib/utils";
 import { useRouter } from "next/navigation";
 
-function Visualize() { 
+function Visualize() {
   const features = [
     {
       title: "Visualize Arrays",
@@ -48,34 +48,28 @@ function Visualize() {
       link: "/progress",
     },
   ];
-    
+
   return (
-    <div  className="bg-zinc-900 h-screen px-10">
-    <div className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-4 relative z-10 py-10 mx-auto ">
-      {features.map((feature, index) => (
-        <Feature key={feature.title} {...feature} index={index} />
-      ))}
-    </div>
+    <div className="bg-zinc-900 min-h-screen md:px-10 px-3">
+      <div className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-4 relative z-10 py-10 mx-auto ">
+        {features.map((feature, index) => (
+          <Feature key={feature.title} {...feature} index={index} />
+        ))}
+      </div>
     </div>
   );
 }
 
-const Feature = ({
-  title,
-  description,
-  index,
-  link
-}) => {
+const Feature = ({ title, description, index, link }) => {
+  const router = useRouter();
 
-  const router = useRouter()
-
-  function handleNavigate(){
-    router.push(`visualize/${link}`)
+  function handleNavigate() {
+    router.push(`visualize/${link}`);
   }
 
   return (
     <div
-    onClick={handleNavigate}
+      onClick={handleNavigate}
       className={cn(
         "flex flex-col lg:border-r  py-10 relative group/feature dark:border-neutral-800 cursor-pointer bg-zinc-200",
         (index === 0 || index === 4) && "lg:border-l dark:border-neutral-800",

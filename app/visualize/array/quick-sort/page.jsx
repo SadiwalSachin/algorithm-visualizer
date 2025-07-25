@@ -16,7 +16,7 @@ const QuickSort = () => {
   // Generate random array
   const generateRandomArray = () => {
     const newArray = Array.from(
-      { length: 10 },
+      { length: 7 },
       () => Math.floor(Math.random() * 90) + 10
     );
     setArray(newArray);
@@ -67,7 +67,7 @@ const QuickSort = () => {
     const svg = d3.select(svgRef.current);
     svg.selectAll("*").remove();
 
-    const width = 600;
+    const width = 300;
     const height = 300;
     const barWidth = width / arr.length;
 

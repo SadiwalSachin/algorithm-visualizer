@@ -15,8 +15,8 @@ const SelectionSort = () => {
   const [sortedUpTo, setSortedUpTo] = useState(-1);
   const [speed, setSpeed] = useState(100);
 
-  const ARRAY_SIZE = 10;
-  const SVG_WIDTH = 800;
+  const ARRAY_SIZE = 7;
+  const SVG_WIDTH = 300;
   const SVG_HEIGHT = 400;
   const MARGIN = { top: 20, right: 20, bottom: 40, left: 40 };
   const CHART_WIDTH = SVG_WIDTH - MARGIN.left - MARGIN.right;
