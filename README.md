@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🧠 Algorithm Visualizer
 
-## Getting Started
+An interactive and educational platform built using **Next.js** that visually demonstrates how popular algorithms work step-by-step. Ideal for students, educators, and developers who want to learn, teach, or reinforce algorithmic thinking with animated, real-time visualizations.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- 🎨 Intuitive animations to understand sorting and searching algorithms
+- 🧑‍💻 User authentication (sign up & log in)
+- ⚙️ Customizable array size and animation speed
+- 📈 Real-time visual feedback for better algorithm comprehension
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ✅ Algorithms Implemented (Phase 1)
 
-## Learn More
+### 🔁 Sorting Algorithms
 
-To learn more about Next.js, take a look at the following resources:
+1. **Bubble Sort**
+   - Compares adjacent elements and swaps them if out of order
+   - Repeats until the entire array is sorted
+   - Time Complexity: O(n²)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. **Selection Sort**
+   - Finds the minimum element and places it at the correct position in each pass
+   - Time Complexity: O(n²)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. **Insertion Sort**
+   - Builds the final sorted array one item at a time
+   - Shifts elements to make space for the new item
+   - Time Complexity: O(n²)
 
-## Deploy on Vercel
+4. **Merge Sort**
+   - Divide-and-conquer algorithm
+   - Recursively splits the array and merges them in sorted order
+   - Time Complexity: O(n log n)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+5. **Quick Sort**
+   - Divide-and-conquer using a pivot
+   - Partitions the array into subarrays around the pivot and sorts them recursively
+   - Time Complexity: O(n log n) on average
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+### 🔍 Searching Algorithm
+
+6. **Binary Search**
+   - Efficient search on a sorted array
+   - Repeatedly divides the search space in half
+   - Time Complexity: O(log n)
+
+---
+
+## 🛠 Tech Stack
+
+- **Framework**: [Next.js](https://nextjs.org/) (App Router)
+- **Visualization Library**: [D3.js](https://d3js.org/)
+- **Styling**: Tailwind CSS
+- **Authentication**: JWT-based login & registration
+- **Database**: MongoDB (with Mongoose)
+- **Deployment**: Vercel
+
+---
+
+## 📅 Roadmap (Next Phase)
+
+- Add more algorithms:
+  - DFS, BFS (Graph Traversal)
+  - Dijkstra’s Algorithm
+  - Heap Sort, Counting Sort, Radix Sort
+  - Linear Search
+- User dashboard for tracking activity
+- Theme customization (dark/light)
+- Code snippet generator with explanations
+
+---
+
+## 📬 Contribute
+
+If you want to contribute, feel free to fork the repo and create a pull request. For major changes, please open an issue first to discuss what you would like to change.
+
+---
+
+## 📄 License
+
+This project is open-source and available under the [MIT License](LICENSE).

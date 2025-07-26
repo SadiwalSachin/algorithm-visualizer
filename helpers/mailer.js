@@ -1,9 +1,9 @@
 import User from "@/models/user.model";
 import nodemailer from "nodemailer";
 import bcryptjs from "bcryptjs";
-import { Resend } from "resend";
+// import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_EMAIL_API_KEY);
+// const resend = new Resend(process.env.RESEND_EMAIL_API_KEY);
 
 export default async function sendEmail({ email, emailType, userId }) {
   try {
@@ -23,13 +23,13 @@ export default async function sendEmail({ email, emailType, userId }) {
       });
     }
 
-    // let transport = nodemailer.createTransport({
-    //   service: "gmail",
-    //   auth: {
-    //     user: process.env.USER_EMAIL,
-    //     pass:process.env.USER_PASS,
-    //   },
-    // });
+    let transport = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: process.env.USER_EMAIL,
+        pass:process.env.USER_PASS,
+      },
+    });
 
     const link = `${process.env.DOMAIN}/verify-email?token=${hashedToken}`;
     const actionText =
@@ -71,35 +71,35 @@ export default async function sendEmail({ email, emailType, userId }) {
   </div>
 `;
 
-    // const mailOptions = {
-    //   from: "sachinsadiwal7615@gmail.com",
-    //   to: email,
-    //   subject:
-    //     emailType === "VERIFY" ? "Verify your Email" : "Reset your Password",
-    //   html: html,
-    // };
-
-    const { data, error } = await resend.emails.send({
-      from: "onboarding@resend.dev",
+    const mailOptions = {
+      from: "sachinsadiwal7615@gmail.com",
       to: email,
       subject:
         emailType === "VERIFY" ? "Verify your Email" : "Reset your Password",
       html: html,
-    });
+    };
 
-    if(error){
-    console.log("Some error occured in email");
-    console.log(error);
-    return error
-    }
+    // const { data, error } = await resend.emails.send({
+    //   from: "onboarding@resend.dev",
+    //   to: email,
+    //   subject:
+    //     emailType === "VERIFY" ? "Verify your Email" : "Reset your Password",
+    //   html: html,
+    // });
 
-    // const mailResponse = await transport.sendMail(mailOptions);
+    // if(error){
+    // console.log("Some error occured in email");
+    // console.log(error);
+    // return error
+    // }
 
-    // console.log("send email response", mailResponse);
+    const mailResponse = await transport.sendMail(mailOptions);
 
-    console.log("response of email send : ",data);
+    console.log("send email response", mailResponse);
+
+    // console.log("response of email send : ",data);
     
-    return data;
+    return mailResponse;
   } catch (error) {
     console.log("Some error occured while sending mail to user");
     console.error(error);
