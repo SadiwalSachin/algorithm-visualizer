@@ -52,9 +52,9 @@ export async function POST(request) {
     
     // send verification email
 
-    await sendEmail({email,emailType:"VERIFY",userId:savedUser?._id})
+    // await sendEmail({email,emailType:"VERIFY",userId:savedUser?._id})
 
-    console.log("send email is called");
+    // console.log("send email is called");
     
     return NextResponse.json({
         message:"User registered successfully",

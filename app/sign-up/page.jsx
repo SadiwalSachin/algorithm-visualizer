@@ -40,7 +40,7 @@ const Signup = () => {
       console.log(`response came from server after sign up `,response);
       if(response?.data?.success){
         toast.success("Signup successful!");
-        router.push("/verify-email/verify-pending")
+        router.push("/login")
         setIsSubmitting(false)
       } else {
         toast.success(response?.data?.error);
