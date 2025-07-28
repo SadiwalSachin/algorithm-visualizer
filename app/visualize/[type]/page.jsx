@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 
-const supportedTypes = ["array"]
+const supportedTypes = ["array","linked-list"]
 
 export default function VisualizerPage(params){
     const {type} = params
