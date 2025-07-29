@@ -10,11 +10,11 @@ export default function ArrayVisualizerIndex() {
         "Start building a linked list from scratch with user inputs.",
       link: "/visualize/linked-list/create",
     },
-    // {
-    //   title: "Insert at Index",
-    //   description: "Insert a node at a specific index in the list.",
-    //   link: "/visualize/linked-list/insert-index",
-    // },
+    {
+      title: "Insert at Index",
+      description: "Insert a node at a specific index in the list.",
+      link: "/visualize/linked-list/insert-node",
+    },
     // {
     //   title: "Reverse Linked List",
     //   description: "Reverse the entire linked list and visualize.",

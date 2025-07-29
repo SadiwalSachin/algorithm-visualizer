@@ -12,17 +12,17 @@ function Visualize() {
       link: "/array",
     },
     {
-      title: "Master Strings",
-      description:
-        "Explore pattern matching, anagram checks, and sliding window techniques with real-time string manipulation animations.",
-      link: "/string",
-    },
-    {
       title: "Linked List Logic",
       description:
         "See how nodes are connected, traversed, reversed, and manipulated in linked lists—step-by-step.",
       link: "/linked-list",
     },
+    // {
+    //   title: "Master Strings",
+    //   description:
+    //     "Explore pattern matching, anagram checks, and sliding window techniques with real-time string manipulation animations.",
+    //   link: "/string",
+    // },
     {
       title: "Stack & Queue in Action",
       description:
