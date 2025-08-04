@@ -2,7 +2,11 @@ import Link from 'next/link';
 import { HoverEffect } from '@/components/ui/card-hover-effect';
 import { ArrowBigLeft } from 'lucide-react';
 
-export default function ArrayVisualizerIndex() {
+export default function ArrayVisualizerIndex({name,surname}) {
+
+  console.log(name,surname);
+  
+
   const sortingAlgorithms = [
     {
       title: 'Bubble Sort',

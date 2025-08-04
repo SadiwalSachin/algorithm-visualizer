@@ -8,8 +8,11 @@ export default async function DynamicPage({ params }) {
     "merge-sort": "merge-sort.jsx",
     "quick-sort": "quick-sort.jsx",
     "selection-sort": "selection-sort.jsx",
-    create: "create.jsx",
+    "create": "create.jsx",
     "insert-node": "insert-node.jsx",
+    "delete-node": "delete-node.jsx",
+    "basic-stack":"basic-stack.jsx",
+    "basic-queue":"basic-queue.jsx"
   };
 
   let type = "";
@@ -21,7 +24,12 @@ export default async function DynamicPage({ params }) {
   } else if (slug[0] == "linked-list") {
     type = "linked-list";
     algorithm = slug[1] ? pageData[slug[1]] : "front-page.jsx";
+  } else if (slug[0] == "stack-queue") {
+    type = "stack-queue";
+    algorithm = slug[1] ? pageData[slug[1]] : "front-page.jsx";
   }
+
+  console.log(`data coming from url ${type} ${algorithm}`);
 
   try {
     const componentModule = await import(`Pages/${type}/${algorithm}`);
@@ -39,7 +47,7 @@ export default async function DynamicPage({ params }) {
         </div>
       );
 
-    return <Component />;
+    return <Component name={"Sachin"} surname={"sadiwal"} />;
   } catch (error) {
     console.error("Error loading component:", error);
     return (

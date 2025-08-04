@@ -5,26 +5,17 @@ import { ArrowBigLeft } from "lucide-react";
 export default function ArrayVisualizerIndex() {
   const linkedList = [
     {
-      title: "Create Linked List",
+      title: "Basic Stack Working",
       description:
         "Start building a linked list from scratch with user inputs.",
-      link: "/visualize/linked-list/create",
+      link: "/visualize/stack-queue/basic-stack",
     },
     {
-      title: "Insert at Index",
-      description: "Insert a node at a specific index in the list.",
-      link: "/visualize/linked-list/insert-node",
-    },
-    {
-      title: "Delete Node",
-      description: "Insert a node at a specific index in the list.",
-      link: "/visualize/linked-list/delete-node",
-    },
-    // {
-    //   title: "Reverse Linked List",
-    //   description: "Reverse the entire linked list and visualize.",
-    //   link: "/visualize/linked-list/reverse",
-    // },
+      title: "Basic Queue Working",
+      description:
+        "Start building a linked list from scratch with user inputs.",
+      link: "/visualize/stack-queue/basic-queue",
+    }
   ];
 
   return (
