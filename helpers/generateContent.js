@@ -1,6 +1,6 @@
 import { GoogleGenAI } from "@google/genai";
 
-const ai = new GoogleGenAI({ apiKey: "AIzaSyAtB35REmSJGmJ8b9hozS8HPc35fmPZ3uU" });
+const ai = new GoogleGenAI({ apiKey:process.env.GEMINI_API_KEY});
 
 export default async function generateContent(userQuery) {
  try { 
